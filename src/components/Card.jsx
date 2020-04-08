@@ -8,6 +8,8 @@ class Card extends Component {
     state = {
         todoList: []
     }
+
+    //
     componentDidMount() {
         const todoList = localStorage.todoList;
 
@@ -26,6 +28,7 @@ class Card extends Component {
         }
     }
 
+    //
     onCreate = (value) => {
         const todoList = this.state.todoList;
         this.setState({
@@ -33,11 +36,13 @@ class Card extends Component {
         });
     }
 
+    //
     render() {
+        const todoList = this.state.todoList;
         return (
             <div className='todo-list-card'>
                 <p>Todo List</p>
-                <TodoList />
+                <TodoList todoList={todoList} />
                 <TodoInput onCreate={this.onCreate}/>
             </div>
         )
