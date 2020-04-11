@@ -1,15 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
 
+import Card from './Card';
 
-class App extends Component {
-  render() {
-    return (
-      <>
-        
-      </>
-    )
-  }
+function App() {
+  return (
+    <>
+      <Card/>
+    </>
+  )
 }
 
 export default App;
