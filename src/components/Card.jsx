@@ -3,6 +3,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import TodoList from './TodoList';
 import TodoInput from './TodoInput';
 
+import './Card.css'
 
 function Card() {
     const [todoList, setTodoList] = useState([]);
