@@ -20,14 +20,18 @@ function TodoInput(props) {
      
     return (
         <div className='todo-input'>
-            <textarea 
-                ref={textRef} 
-                placeholder='할 일을 적어주세요.' 
-                value={todo} 
-                onChange={onChangeTextarea} 
-            />
-            <button onClick={onAdd}>Add</button>
-            <button onClick={onCancel}>X</button>
+            <div className='todo-input-text'>
+                <textarea 
+                    ref={textRef} 
+                    placeholder='할 일을 적어주세요.' 
+                    value={todo} 
+                    onChange={onChangeTextarea} 
+                />
+            </div>
+            <div className='todo-input-controls'>
+                <button className='add' onClick={onAdd}>Add</button>
+                <button className='cancel' onClick={onCancel}>X</button>
+            </div>
         </div>
     );
 }
