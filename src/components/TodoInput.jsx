@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 
-function TodoInput(props) {
+function TodoInput({ onCreateTodo }) {
     const [todo, setTodo] = useState('');
     const textRef = useRef('');
 
@@ -9,7 +9,7 @@ function TodoInput(props) {
     }
     const onAdd = (e) => {
         if(!todo) { return; }
-        props.onCreateTodo(todo);
+        onCreateTodo(todo);
         setTodo('');
         textRef.current.focus();
     }
