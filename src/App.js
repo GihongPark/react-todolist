@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
 
-import Card from './Card';
+import CardContainer from './containers/CardContainer';
 
 function App() {
   return (
     <>
-      <Card/>
+      <CardContainer/>
     </>
   )
 }
