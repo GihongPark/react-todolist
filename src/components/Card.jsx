@@ -6,26 +6,6 @@ import TodoInput from './TodoInput';
 import './Card.css'
 
 function Card({ todoList, onCreateTodo }) {
-    // const localTodoList = useRef(localStorage.todoList);
-
-    // useEffect(() => {
-    //     console.log('mount!');
-    //     if(localTodoList.current) {
-    //         setTodoList(JSON.parse(localTodoList.current))
-    //     }
-    // }, []);
-    // useEffect(() => {
-    //     console.log('update!');
-    //     // 두 배열이 일치하는지 확인
-    //     if(JSON.stringify(localTodoList.current) !== JSON.stringify(todoList)) {
-    //         localStorage.todoList = JSON.stringify(todoList);
-    //         localTodoList.current = todoList;
-    //     }
-    // }, [todoList]);
-    
-    //
-
-    console.log(todoList);
     return (
         <div className='todo-list-card'>
             <p>Todo List</p>

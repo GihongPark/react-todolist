@@ -8,16 +8,18 @@ export const createTodo = todo => ({
 })
 
 // Initial State
+const getTodoList = () => {
+    const todoList = localStorage.todoList;
+    return todoList ? JSON.parse(todoList) : [];
+}
 const initialState = {
-    todoList: []
+    todoList: getTodoList()
 }
 
 // Reducer
 export default function card(state=initialState, action) {
-    console.log("action", action);
     switch(action.type) {
         case CREATE_TODO: 
-            console.log(state.todoList);
             return {
                 ...state,
                 todoList: [...state.todoList, action.todo]
