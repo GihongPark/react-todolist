@@ -1,13 +1,17 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 
-import CardContainer from './containers/CardContainer';
+import Board from './components/Board';
 
 function App() {
   return (
-    <>
-      <CardContainer/>
-    </>
+    <div className='App'>
+      <div className='header'></div>
+      <div className='content'>
+        <div className='menu'></div>
+        <Board />
+      </div>
+    </div>
   )
 }
 

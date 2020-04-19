@@ -3,7 +3,7 @@ import React from 'react';
 import TodoList from './TodoList';
 import TodoInput from './TodoInput';
 
-import './Card.css'
+import './Card.scss'
 
 function Card({ todoList, onCreateTodo }) {
     return (
