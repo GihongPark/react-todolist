@@ -1,0 +1,31 @@
+@mixin flex($direction : column) {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: $direction;
+}
+
+.App {
+  @include flex;
+  height: 100vh;
+  background-color: rgb(0, 121, 191);
+
+  .header {
+    height: 0;
+  }
+  
+  .content {
+    @include flex;
+    padding: 10px;
+
+    .menu {
+      height: 0;
+    }
+    
+    .board {
+      @include flex(row);
+    }
+  }
+}
+
+
+
